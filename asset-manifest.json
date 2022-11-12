@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/erikberg/static/css/main.08a28747.css",
-    "main.js": "/erikberg/static/js/main.893d0469.js",
+    "main.js": "/erikberg/static/js/main.95374d48.js",
     "static/media/Caslons.ttf": "/erikberg/static/media/Caslons.c3a97a2aa626574d698b.ttf",
     "index.html": "/erikberg/index.html",
     "main.08a28747.css.map": "/erikberg/static/css/main.08a28747.css.map",
-    "main.893d0469.js.map": "/erikberg/static/js/main.893d0469.js.map"
+    "main.95374d48.js.map": "/erikberg/static/js/main.95374d48.js.map"
   },
   "entrypoints": [
     "static/css/main.08a28747.css",
-    "static/js/main.893d0469.js"
+    "static/js/main.95374d48.js"
   ]
 }
