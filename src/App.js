@@ -36,6 +36,7 @@ function App() {
             </Border>
           }
         />
+        <Route path="erikberg/*" element={<App />} />
         <Route path="poems" element={<Poems />} />
         <Route path="films" element={<Films />} />
         <Route path="order" element={<Order />} />
