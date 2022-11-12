@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/erikberg/static/css/main.073c9b0a.css",
+    "main.js": "/erikberg/static/js/main.1f9c4fa8.js",
+    "static/js/787.081ffee0.chunk.js": "/erikberg/static/js/787.081ffee0.chunk.js",
+    "static/media/logo.svg": "/erikberg/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/erikberg/index.html",
+    "main.073c9b0a.css.map": "/erikberg/static/css/main.073c9b0a.css.map",
+    "main.1f9c4fa8.js.map": "/erikberg/static/js/main.1f9c4fa8.js.map",
+    "787.081ffee0.chunk.js.map": "/erikberg/static/js/787.081ffee0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.1f9c4fa8.js"
+  ]
+}
