@@ -123,7 +123,7 @@ function Order() {
         </TotalContainer>
         <CompletePurchaseContainer
           isDisabled={gardenOfCalendarsQty + anthonyReturnsQty < 1}
-          href={`https://erik-berg.myshopify.com/cart/43182511259895:${gardenOfCalendarsQty},43564643451127:${anthonyReturnsQty}?channel=buy_button`}
+          href={`https://erik-berg.myshopify.com/cart/43182511259895:${gardenOfCalendarsQty},43564643451127:${anthonyReturnsQty}`}
         >
           Complete Purchase
         </CompletePurchaseContainer>
