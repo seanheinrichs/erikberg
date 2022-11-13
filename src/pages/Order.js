@@ -8,7 +8,7 @@ const OrderContainer = styled("div")(({ isMobileLandscape, isMobilePortrait }) =
   width: isMobilePortrait ? "90%" : isMobileLandscape ? "70%" : "50%",
   height: "100%",
   position: "absolute",
-  overflow: "hidden",
+  // overflow: "hidden", // if things break try putting this back
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-start",
@@ -17,12 +17,13 @@ const OrderContainer = styled("div")(({ isMobileLandscape, isMobilePortrait }) =
   paddingRight: isMobilePortrait ? "5%" : isMobileLandscape ? "15%" : "25%",
 }));
 
-const BackButtonContainer = styled("div")({
+const BackButtonContainer = styled("div")(({ isMobileLandscape }) => ({
   maxWidth: "100%",
   maxHeight: "100%",
-  paddingBottom: "3em",
+  paddingBottom: !isMobileLandscape && "3vh",
+  paddingTop: isMobileLandscape && "2vh",
   cursor: "pointer",
-});
+}));
 
 const TotalContainer = styled("div")({
   display: "flex",
@@ -46,13 +47,14 @@ const TotalPrice = styled("div")({
   textAlign: "right",
 });
 
-const CompletePurchaseContainer = styled("a")(({ isDisabled }) => ({
+const CompletePurchaseContainer = styled("a")(({ isMobileLandscape, isDisabled }) => ({
   width: "100%",
   textAlign: "right",
   color: isDisabled ? "#878787 !important" : "#6a7a9f !important",
   fontWeight: "bold",
   fontSize: "1.3em",
-  paddingTop: "2em",
+  paddingTop: isMobileLandscape ? "2vh" : "4vh",
+  paddingBottom: isMobileLandscape && "2vh",
   textDecoration: "none",
   pointerEvents: isDisabled && "none",
 }));
@@ -96,7 +98,7 @@ function Order() {
   return (
     <>
       <OrderContainer isMobileLandscape={isMobileLandscape} isMobilePortrait={isMobilePortrait}>
-        <BackButtonContainer onClick={() => navigate(-1)}>
+        <BackButtonContainer isMobileLandscape={isMobileLandscape} onClick={() => navigate(-1)}>
           <img src={process.env.PUBLIC_URL + "/icons/back-arrow.svg"} alt={"Back Button"} width="40px" height="40px" />
         </BackButtonContainer>
         <Item
@@ -122,6 +124,7 @@ function Order() {
           <TotalPrice>${totalPrice.toFixed(2)}</TotalPrice>
         </TotalContainer>
         <CompletePurchaseContainer
+          isMobileLandscape={isMobileLandscape}
           isDisabled={gardenOfCalendarsQty + anthonyReturnsQty < 1}
           href={`https://erik-berg.myshopify.com/cart/43182511259895:${gardenOfCalendarsQty},43564643451127:${anthonyReturnsQty}`}
         >
