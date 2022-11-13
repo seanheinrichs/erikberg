@@ -20,7 +20,7 @@ const OrderContainer = styled("div")(({ isMobileLandscape, isMobilePortrait }) =
 const BackButtonContainer = styled("div")(({ isMobileLandscape }) => ({
   maxWidth: "100%",
   maxHeight: "100%",
-  paddingBottom: !isMobileLandscape && "3vh",
+  paddingBottom: "4vh",
   paddingTop: isMobileLandscape && "2vh",
   cursor: "pointer",
 }));
@@ -53,7 +53,7 @@ const CompletePurchaseContainer = styled("a")(({ isMobileLandscape, isDisabled }
   color: isDisabled ? "#878787 !important" : "#6a7a9f !important",
   fontWeight: "bold",
   fontSize: "1.3em",
-  paddingTop: isMobileLandscape ? "2vh" : "4vh",
+  paddingTop: "6vh",
   paddingBottom: isMobileLandscape && "2vh",
   textDecoration: "none",
   pointerEvents: isDisabled && "none",

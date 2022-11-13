@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
+import { useMediaQueries } from "../../hooks/useMediaQueries";
 
-const ItemContainer = styled("div")(({ hasBottomPadding }) => ({
-  paddingBottom: hasBottomPadding ? "2em" : "0em",
+const ItemContainer = styled("div")(({ isMobileLandscape, hasBottomPadding }) => ({
+  paddingBottom: hasBottomPadding ? isMobileLandscape ? "2vh" : "2em" : "0em",
   width: "100%",
 }));
 
@@ -69,8 +70,10 @@ function Item({
 }) {
   const isBuyBothDiscountItem = id === 0 && buyBothDiscount;
 
+  const { isMobileLandscape } = useMediaQueries();
+
   return (
-    <ItemContainer hasBottomPadding={hasBottomPadding}>
+    <ItemContainer isMobileLandscape={isMobileLandscape} hasBottomPadding={hasBottomPadding}>
       <ItemInfoContainer>
         <NameContainer>{name}</NameContainer>
         <PreventOverlap>
