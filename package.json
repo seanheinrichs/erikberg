@@ -1,7 +1,7 @@
 {
   "name": "erikberg",
   "version": "0.1.0",
-  "homepage": "https://seanheinrichs.github.io/erikberg",
+  "homepage": "https://seanheinrichs.github.io",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",

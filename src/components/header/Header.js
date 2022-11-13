@@ -43,7 +43,7 @@ function Header() {
       <HomeButton
         isMobileLandscape={isMobileLandscape}
         isMobilePortrait={isMobilePortrait}
-        onClick={() => navigate("/erikberg")}
+        onClick={() => navigate("/")}
       >
         HOME
       </HomeButton>
