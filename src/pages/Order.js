@@ -63,8 +63,8 @@ function Order() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [gardenOfCalendarsQty, setGardenOfCalendarsQty] = useState(location.state.id === 0 ? 1 : 0);
-  const [anthonyReturnsQty, setAnothyReturnsQty] = useState(location.state.id === 1 ? 1 : 0);
+  const [gardenOfCalendarsQty, setGardenOfCalendarsQty] = useState(location.state?.id === 0 ? 1 : 0);
+  const [anthonyReturnsQty, setAnothyReturnsQty] = useState(location.state?.id === 1 ? 1 : 0);
   const [totalPrice, setTotalPrice] = useState(0.0);
   const [buyBothDiscount, setBuyBothDiscount] = useState(false);
 
