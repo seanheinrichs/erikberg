@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.1f655769.css",
-    "main.js": "/static/js/main.aed1544f.js",
+    "main.js": "/static/js/main.9ee99e9a.js",
     "static/media/Caslons.ttf": "/static/media/Caslons.c3a97a2aa626574d698b.ttf",
     "index.html": "/index.html",
     "main.1f655769.css.map": "/static/css/main.1f655769.css.map",
-    "main.aed1544f.js.map": "/static/js/main.aed1544f.js.map"
+    "main.9ee99e9a.js.map": "/static/js/main.9ee99e9a.js.map"
   },
   "entrypoints": [
     "static/css/main.1f655769.css",
-    "static/js/main.aed1544f.js"
+    "static/js/main.9ee99e9a.js"
   ]
 }
