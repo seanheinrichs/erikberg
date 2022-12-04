@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import Header from "../components/header/Header";
+import { useEffect, useState } from 'react';
+import Header from '../components/header/Header';
 
 function Photographs() {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    fetch("/photos")
+    fetch('/photos')
       .then((response) => response.json())
       .then((data) => setPhotos(data));
   }, []);
@@ -13,7 +13,7 @@ function Photographs() {
   const showPhotos = () =>
     photos.map((photo) => (
       <div key={`${photo}`}>
-        <img src={photo} alt={"photos"} />
+        <img src={photo} alt={'photos'} />
       </div>
     ));
 
