@@ -41,7 +41,11 @@ function Preview({ handleOnClose, open, selectedIndex }) {
   return (
     <Dialog onClose={handleOnClose} open={open}>
       <Document
-        file={selectedIndex === 0 ? '/pdfs/the-garden-of-calendars.pdf' : '/pdfs/anthony-returns.pdf'}
+        file={
+          selectedIndex === 0
+            ? process.env.PUBLIC_URL + '/pdfs/the-garden-of-calendars.pdf'
+            : process.env.PUBLIC_URL + '/pdfs/anthony-returns.pdf'
+        }
         loading={null}
         onLoadError={null}>
         <Page
