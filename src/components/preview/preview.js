@@ -2,7 +2,6 @@ import { Dialog } from '@mui/material';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 import { useEffect, useState } from 'react';
 import { useMediaQueries } from '../../hooks/useMediaQueries';
-import AnthonyReturns from './anthony-returns.pdf';
 import TheGardenOfCalendars from './the-garden-of-calendars.pdf';
 
 const gardenOfCalendarPoetryPages = [
@@ -42,7 +41,12 @@ function Preview({ handleOnClose, open, selectedIndex }) {
 
   return (
     <Dialog onClose={handleOnClose} open={open}>
-      <Document file={selectedIndex === 0 ? TheGardenOfCalendars : AnthonyReturns} loading={null} onLoadError={null}>
+      <Document
+        file={
+          selectedIndex === 0 ? TheGardenOfCalendars : 'https://www.dropbox.com/s/z0l5rt8twapdmnf/Anthony-Returns.pdf'
+        }
+        loading={null}
+        onLoadError={null}>
         <Page
           pageNumber={
             selectedIndex === 0
