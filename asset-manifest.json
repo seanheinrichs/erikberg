@@ -1,17 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.1f655769.css",
-    "main.js": "/static/js/main.8e3f9ce4.js",
-    "static/media/pdf.worker.js": "/static/media/pdf.worker.b874f90779b1ec6a639c.js",
-    "static/media/anthony-returns.pdf": "/static/media/anthony-returns.71daf121a269bed84d01.pdf",
-    "static/media/the-garden-of-calendars.pdf": "/static/media/the-garden-of-calendars.b2dd2c02b0df59081d5c.pdf",
+    "main.js": "/static/js/main.ddf9bc99.js",
     "static/media/Caslons.ttf": "/static/media/Caslons.c3a97a2aa626574d698b.ttf",
     "index.html": "/index.html",
     "main.1f655769.css.map": "/static/css/main.1f655769.css.map",
-    "main.8e3f9ce4.js.map": "/static/js/main.8e3f9ce4.js.map"
+    "main.ddf9bc99.js.map": "/static/js/main.ddf9bc99.js.map"
   },
   "entrypoints": [
     "static/css/main.1f655769.css",
-    "static/js/main.8e3f9ce4.js"
+    "static/js/main.ddf9bc99.js"
   ]
 }
