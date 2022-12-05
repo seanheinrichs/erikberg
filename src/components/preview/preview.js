@@ -43,8 +43,8 @@ function Preview({ handleOnClose, open, selectedIndex }) {
       <Document
         file={
           selectedIndex === 0
-            ? process.env.PUBLIC_URL + '/the-garden-of-calendars'
-            : process.env.PUBLIC_URL + '/anthony-returns'
+            ? process.env.PUBLIC_URL + '/pdfs/the-garden-of-calendars'
+            : process.env.PUBLIC_URL + '/pdfs/anthony-returns'
         }
         loading={null}
         onLoadError={null}>
