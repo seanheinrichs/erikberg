@@ -2,8 +2,8 @@ import books from '../data/poetry-books.json';
 import Book from '../components/book/Book';
 import Header from '../components/header/Header';
 import styled from '@emotion/styled';
-// import { useState } from 'react';
-// import Preview from '../components/preview/preview';
+import { useState } from 'react';
+import Preview from '../components/preview/preview';
 import React from 'react';
 
 const BooksContainer = styled('div')({
@@ -14,12 +14,12 @@ const BooksContainer = styled('div')({
 });
 
 function Poems() {
-  // const [openPreview, setOpenPreview] = useState(false);
-  // const [selectedIndex, setSelectedIndex] = useState(0);
+  const [openPreview, setOpenPreview] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
     <>
-      {/* <Preview handleOnClose={() => setOpenPreview(false)} open={openPreview} selectedIndex={selectedIndex} /> */}
+      <Preview handleOnClose={() => setOpenPreview(false)} open={openPreview} selectedIndex={selectedIndex} />
       <Header />
       <BooksContainer>
         {books.map(({ title, image, date, pageCount, dateSimple }, index) => {
@@ -32,8 +32,8 @@ function Poems() {
               date={date}
               dateSimple={dateSimple}
               pageCount={pageCount}
-              // setOpenPreview={setOpenPreview}
-              // setSelectedIndex={setSelectedIndex}
+              setOpenPreview={setOpenPreview}
+              setSelectedIndex={setSelectedIndex}
             />
           );
         })}
