@@ -57,7 +57,7 @@ const BookText = styled('span')(({ isMobilePortrait }) => ({
   marginBottom: isMobilePortrait ? '1rem' : '2rem'
 }));
 
-function Book({ id, title, image, date, pageCount, dateSimple, setOpenPreview, setSelectedIndex }) {
+function Book({ id, title, image, date, pageCount, dateSimple }) {
   const navigate = useNavigate();
   const { isMobileLandscape, isMobilePortrait } = useMediaQueries();
 
@@ -67,10 +67,11 @@ function Book({ id, title, image, date, pageCount, dateSimple, setOpenPreview, s
         <ImageContainer
           isMobilePortrait={isMobilePortrait}
           isMobileLandscape={isMobileLandscape}
-          onClick={() => {
-            setSelectedIndex(id);
-            setOpenPreview(true);
-          }}>
+          // onClick={() => {
+          //   setSelectedIndex(id);
+          //   setOpenPreview(true);
+          // }}
+        >
           <img src={process.env.PUBLIC_URL + image} alt={title} width="100%" height="100%" />
         </ImageContainer>
       </BookImageContainer>

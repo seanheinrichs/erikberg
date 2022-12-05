@@ -32,8 +32,8 @@ function Poems() {
               date={date}
               dateSimple={dateSimple}
               pageCount={pageCount}
-              setOpenPreview={setOpenPreview}
-              setSelectedIndex={setSelectedIndex}
+              // setOpenPreview={setOpenPreview}
+              // setSelectedIndex={setSelectedIndex}
             />
           );
         })}
