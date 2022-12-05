@@ -2,6 +2,8 @@ import { Dialog } from '@mui/material';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 import { useEffect, useState } from 'react';
 import { useMediaQueries } from '../../hooks/useMediaQueries';
+import AnthonyReturns from './anthony-returns.pdf';
+import TheGardenOfCalendars from './the-garden-of-calendars.pdf';
 
 const gardenOfCalendarPoetryPages = [
   9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 26, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
@@ -40,14 +42,7 @@ function Preview({ handleOnClose, open, selectedIndex }) {
 
   return (
     <Dialog onClose={handleOnClose} open={open}>
-      <Document
-        file={
-          selectedIndex === 0
-            ? process.env.PUBLIC_URL + '/pdfs/the-garden-of-calendars.pdf'
-            : process.env.PUBLIC_URL + '/pdfs/anthony-returns.pdf'
-        }
-        loading={null}
-        onLoadError={null}>
+      <Document file={selectedIndex === 0 ? TheGardenOfCalendars : AnthonyReturns} loading={null} onLoadError={null}>
         <Page
           pageNumber={
             selectedIndex === 0
