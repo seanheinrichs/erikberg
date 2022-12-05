@@ -15,10 +15,11 @@ const BooksContainer = styled('div')({
 
 function Poems() {
   const [openPreview, setOpenPreview] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
     <>
-      <Preview handleOnClose={() => setOpenPreview(false)} open={openPreview} />
+      <Preview handleOnClose={() => setOpenPreview(false)} open={openPreview} selectedIndex={selectedIndex} />
       <Header />
       <BooksContainer>
         {books.map(({ title, image, date, pageCount, dateSimple }, index) => {
@@ -32,6 +33,7 @@ function Poems() {
               dateSimple={dateSimple}
               pageCount={pageCount}
               setOpenPreview={setOpenPreview}
+              setSelectedIndex={setSelectedIndex}
             />
           );
         })}
