@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.1f655769.css",
-    "main.js": "/static/js/main.32c7db1a.js",
+    "main.js": "/static/js/main.86bb5598.js",
     "static/media/pdf.worker.js": "/static/media/pdf.worker.5a4781656f64092ca08b.js",
     "static/media/Caslons.ttf": "/static/media/Caslons.c3a97a2aa626574d698b.ttf",
     "index.html": "/index.html",
     "main.1f655769.css.map": "/static/css/main.1f655769.css.map",
-    "main.32c7db1a.js.map": "/static/js/main.32c7db1a.js.map"
+    "main.86bb5598.js.map": "/static/js/main.86bb5598.js.map"
   },
   "entrypoints": [
     "static/css/main.1f655769.css",
-    "static/js/main.32c7db1a.js"
+    "static/js/main.86bb5598.js"
   ]
 }
