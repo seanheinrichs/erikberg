@@ -32,7 +32,7 @@ function Preview({ handleOnClose, open, selectedIndex }) {
       setRandomPageNumber(
         generateRandomNumber(
           0,
-          selectedIndex === 0 ? gardenOfCalendarPoetryPages.length : anthonyReturnsPoetryPages.length
+          selectedIndex === 0 ? gardenOfCalendarPoetryPages.length - 1 : anthonyReturnsPoetryPages.length - 1
         )
       );
     }
