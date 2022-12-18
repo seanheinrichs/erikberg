@@ -68,6 +68,9 @@ function Order() {
   const [totalPrice, setTotalPrice] = useState(0.0);
   const [buyBothDiscount, setBuyBothDiscount] = useState(false);
 
+  const BOOK_PRICE = 20;
+  const BUY_BOTH_DISCOUNT = 0.5;
+
   const { isMobileLandscape, isMobilePortrait } = useMediaQueries();
 
   useEffect(() => {
@@ -87,8 +90,9 @@ function Order() {
 
       setTotalPrice(
         buyBothDiscount
-          ? buyBothCount * 35 * 0.85 + (gardenOfCalendarsQty + anthonyReturnsQty - buyBothCount) * 35
-          : (gardenOfCalendarsQty + anthonyReturnsQty) * 35
+          ? buyBothCount * BOOK_PRICE * BUY_BOTH_DISCOUNT +
+              (gardenOfCalendarsQty + anthonyReturnsQty - buyBothCount) * BOOK_PRICE
+          : (gardenOfCalendarsQty + anthonyReturnsQty) * BOOK_PRICE
       );
     } else {
       setTotalPrice(0);
@@ -105,7 +109,8 @@ function Order() {
           name="The Garden of Calendars"
           quantity={gardenOfCalendarsQty}
           setQuantity={setGardenOfCalendarsQty}
-          price={35}
+          price={BOOK_PRICE}
+          discount={BUY_BOTH_DISCOUNT}
           hasBottomPadding
           id={0}
           buyBothDiscount={buyBothDiscount}
@@ -114,7 +119,8 @@ function Order() {
           name="Anthony Returns"
           quantity={anthonyReturnsQty}
           setQuantity={setAnothyReturnsQty}
-          price={35}
+          price={BOOK_PRICE}
+          discount={BUY_BOTH_DISCOUNT}
           hasBottomPadding={false}
           id={1}
           buyBothDiscount={buyBothDiscount}

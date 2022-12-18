@@ -59,7 +59,7 @@ const PreventOverlap = styled('div')({
   display: 'inline-block'
 });
 
-function Item({ name, quantity, setQuantity, price, hasBottomPadding, id, buyBothDiscount }) {
+function Item({ name, quantity, setQuantity, price, hasBottomPadding, id, buyBothDiscount, discount }) {
   const isBuyBothDiscountItem = id === 0 && buyBothDiscount;
 
   const { isMobileLandscape } = useMediaQueries();
@@ -87,7 +87,7 @@ function Item({ name, quantity, setQuantity, price, hasBottomPadding, id, buyBot
       <PriceContainer isBuyBothDiscountItem={isBuyBothDiscountItem}>
         {isBuyBothDiscountItem ? (
           <>
-            <StrikeThrough>${price.toFixed(2)}</StrikeThrough>${(price * 0.85).toFixed(2)}
+            <StrikeThrough>${price.toFixed(2)}</StrikeThrough>${(price * discount).toFixed(2)}
           </>
         ) : (
           `$${price.toFixed(2)}`
