@@ -25,7 +25,8 @@ const FilmImageContainer = styled('div')({
   alignItems: 'flex-end',
   width: '50%',
   paddingRight: '2vw',
-  paddingLeft: '2vw'
+  paddingLeft: '2vw',
+  cursor: 'pointer'
 });
 
 const FilmTitle = styled('span')(({ isMobilePortrait }) => ({
@@ -36,10 +37,12 @@ const FilmTitle = styled('span')(({ isMobilePortrait }) => ({
 const FilmText = styled('div')`
   font-size: clamp(1.3rem, 4vw, 1.7rem);
   font-weight: 500;
+  cursor: pointer;
   a {
     color: #73593d !important;
     text-decoration: none;
-  }
+  },
+
 `;
 
 const ImageContainer = styled('div')(({ isMobilePortrait, isMobileLandscape }) => ({
@@ -54,21 +57,27 @@ const FilmDescription = styled('span')(({ isMobilePortrait }) => ({
   marginBottom: isMobilePortrait ? '1rem' : '2rem'
 }));
 
-function Film({ title, image, text, description, runtime }) {
+function Film({ title, image, text, description, runtime, setOpenTrailer }) {
   const { isMobilePortrait, isMobileLandscape } = useMediaQueries();
 
   return (
     <FilmContainer>
       <FilmImageContainer>
         <ImageContainer isMobilePortrait={isMobilePortrait} isMobileLandscape={isMobileLandscape}>
-          <img src={process.env.PUBLIC_URL + image} alt={title} width="100%" height="100%" />
+          <img
+            src={process.env.PUBLIC_URL + image}
+            alt={title}
+            width="100%"
+            height="100%"
+            onClick={() => setOpenTrailer(true)}
+          />
         </ImageContainer>
       </FilmImageContainer>
       <FilmTextContainer isMobilePortrait={isMobilePortrait}>
         <FilmTitle isMobilePortrait={isMobilePortrait}>{title}</FilmTitle>
         <FilmDescription isMobilePortrait={isMobilePortrait}>{description}</FilmDescription>
         <FilmDescription isMobilePortrait={isMobilePortrait}>{runtime} minutes</FilmDescription>
-        <FilmText>{text}</FilmText>
+        <FilmText onClick={() => setOpenTrailer(true)}>{text}</FilmText>
       </FilmTextContainer>
       <div></div>
     </FilmContainer>
