@@ -14,8 +14,8 @@ function Trailer({ handleOnClose, open }) {
     }
   };
 
-  const widthDimension = isMobileLandscape ? 0.85 : isMobilePortrait ? 1 : 0.5;
-  const heightDimension = isMobileLandscape ? 0.85 : isMobilePortrait ? 0.5 : 0.6;
+  const widthDimension = isMobileLandscape ? 0.85 : isMobilePortrait ? 1 : 0.6;
+  const heightDimension = isMobileLandscape ? 0.85 : isMobilePortrait ? 0.5 : 0.7;
 
   const trailerWidth = window.innerWidth * widthDimension;
   const trailerHeight = window.innerHeight * heightDimension;
@@ -39,7 +39,7 @@ function Trailer({ handleOnClose, open }) {
       onClose={handleOnClose}
       open={open}>
       <YouTube
-        videoId="MWzU1h15KoA"
+        videoId="GM7nM259EDY"
         opts={opts}
         onPlay={(e) => (isMobileLandscape || isMobilePortrait ? fullScreen(e) : {})}
       />

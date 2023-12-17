@@ -76,8 +76,14 @@ function Film({ title, image, text, description, runtime, setOpenTrailer }) {
       <FilmTextContainer isMobilePortrait={isMobilePortrait}>
         <FilmTitle isMobilePortrait={isMobilePortrait}>{title}</FilmTitle>
         <FilmDescription isMobilePortrait={isMobilePortrait}>{description}</FilmDescription>
+        <FilmDescription isMobilePortrait={isMobilePortrait}>December 30, 2023 1pm</FilmDescription>
         <FilmDescription isMobilePortrait={isMobilePortrait}>{runtime} minutes</FilmDescription>
         <FilmText onClick={() => setOpenTrailer(true)}>{text}</FilmText>
+        <a
+          href="https://www.eventbrite.ca/e/years-fall-later-tickets-777311498617?aff=oddtdtcreator"
+          style={{ color: '#73593d', textDecoration: 'none', paddingTop: isMobilePortrait ? '1rem' : '2rem' }}>
+          <FilmText>Buy Tickets</FilmText>
+        </a>
       </FilmTextContainer>
       <div></div>
     </FilmContainer>
