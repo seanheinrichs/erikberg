@@ -31,7 +31,7 @@ const FilmImageContainer = styled('div')({
 
 const FilmTitle = styled('span')(({ isMobilePortrait }) => ({
   marginBottom: isMobilePortrait ? '1rem' : '2rem',
-  fontSize: isMobilePortrait ? '1.2rem' : 'clamp(1.3rem, 3.5vw, 1.7rem)'
+  fontSize: isMobilePortrait ? '1.2rem' : 'clamp(1.3rem, 4vw, 1.7rem)'
 }));
 
 const FilmText = styled('div')`
@@ -57,7 +57,7 @@ const FilmDescription = styled('span')(({ isMobilePortrait }) => ({
   marginBottom: isMobilePortrait ? '1rem' : '2rem'
 }));
 
-function Film({ title, image, text, description, runtime, setOpenTrailer }) {
+function Film({ title, image, text, runtime, setOpenTrailer }) {
   const { isMobilePortrait, isMobileLandscape } = useMediaQueries();
 
   return (
@@ -75,13 +75,21 @@ function Film({ title, image, text, description, runtime, setOpenTrailer }) {
       </FilmImageContainer>
       <FilmTextContainer isMobilePortrait={isMobilePortrait}>
         <FilmTitle isMobilePortrait={isMobilePortrait}>{title}</FilmTitle>
-        <FilmDescription isMobilePortrait={isMobilePortrait}>{description}</FilmDescription>
-        <FilmDescription isMobilePortrait={isMobilePortrait}>December 30, 2023 1pm</FilmDescription>
+        <FilmDescription isMobilePortrait={isMobilePortrait}>
+          Revue Cinema
+          <br />
+          400 Roncesvalles Ave
+        </FilmDescription>
+        <FilmDescription isMobilePortrait={isMobilePortrait}>
+          December 30, 2023
+          <br />
+          1pm
+        </FilmDescription>
         <FilmDescription isMobilePortrait={isMobilePortrait}>{runtime} minutes</FilmDescription>
         <FilmText onClick={() => setOpenTrailer(true)}>{text}</FilmText>
         <a
           href="https://www.eventbrite.ca/e/years-fall-later-tickets-777311498617?aff=oddtdtcreator"
-          style={{ color: '#73593d', textDecoration: 'none', paddingTop: isMobilePortrait ? '1rem' : '2rem' }}>
+          style={{ color: '#73593d', textDecoration: 'none', paddingTop: isMobilePortrait ? '0.5rem' : '1rem' }}>
           <FilmText>Buy Tickets</FilmText>
         </a>
       </FilmTextContainer>
