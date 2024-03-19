@@ -1,18 +1,38 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "title": "The Garden of Calendars",
     "image": "/images/the-garden-of-calendars-cover.jpg",
     "date": "December 2016 - January 2021",
     "dateSimple": "12/2016 - 01/2021",
+    "linkText": "Order Now",
     "pageCount": "83"
   },
   {
-    "id": 2,
+    "id": 1,
     "title": "Anthony Returns",
     "image": "/images/anthony-returns-cover.jpg",
     "date": "May 2014 - August 2014",
-    "dateSimple": "05/2014 - 08/2014", 
+    "dateSimple": "05/2014 - 08/2014",
+    "linkText": "Order Now",
     "pageCount": "168"
+  },
+  {
+    "id": 2,
+    "title": "Nave Littera, Gollow Nook",
+    "image": "/images/nave-literra-gollow-nook.jpg",
+    "date": "September 2015 - July 2017",
+    "dateSimple": "09/2015 - 07/2017",
+    "linkText": "Available Soon",
+    "pageCount": "94"
+  },
+  {
+    "id": 3,
+    "title": "Phone",
+    "image": "/images/phone.jpg",
+    "date": "March 2021 - May 2023",
+    "dateSimple": "03/2021 - 05/2023",
+    "linkText": "Available Soon",
+    "pageCount": "196"
   }
 ]

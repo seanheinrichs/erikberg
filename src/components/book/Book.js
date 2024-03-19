@@ -57,9 +57,11 @@ const BookText = styled('span')(({ isMobilePortrait }) => ({
   marginBottom: isMobilePortrait ? '1rem' : '2rem'
 }));
 
-function Book({ id, title, image, date, pageCount, dateSimple, setSelectedIndex, setOpenPreview }) {
+function Book({ id, title, image, date, pageCount, dateSimple, setSelectedIndex, setOpenPreview, linkText }) {
   const navigate = useNavigate();
   const { isMobileLandscape, isMobilePortrait } = useMediaQueries();
+
+  const canOrder = linkText === 'Order Now';
 
   return (
     <BookContainer>
@@ -78,8 +80,10 @@ function Book({ id, title, image, date, pageCount, dateSimple, setSelectedIndex,
         <BookTitle isMobilePortrait={isMobilePortrait}>{title}</BookTitle>
         <BookText isMobilePortrait={isMobilePortrait}>{isMobilePortrait ? dateSimple : date}</BookText>
         <BookText isMobilePortrait={isMobilePortrait}>{pageCount} pages</BookText>
-        <BookLink isMobilePortrait={isMobilePortrait} onClick={() => navigate('/order', { state: { id } })}>
-          Order Now
+        <BookLink
+          isMobilePortrait={isMobilePortrait}
+          onClick={canOrder ? () => navigate('/order', { state: { id } }) : undefined}>
+          {linkText}
         </BookLink>
       </BookTextContainer>
     </BookContainer>

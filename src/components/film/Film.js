@@ -75,23 +75,9 @@ function Film({ title, image, text, runtime, setOpenTrailer }) {
       </FilmImageContainer>
       <FilmTextContainer isMobilePortrait={isMobilePortrait}>
         <FilmTitle isMobilePortrait={isMobilePortrait}>{title}</FilmTitle>
-        <FilmDescription isMobilePortrait={isMobilePortrait}>
-          Revue Cinema
-          <br />
-          400 Roncesvalles Ave
-        </FilmDescription>
-        <FilmDescription isMobilePortrait={isMobilePortrait}>
-          December 30, 2023
-          <br />
-          1pm
-        </FilmDescription>
+        <FilmDescription isMobilePortrait={isMobilePortrait}>A friendship ends in a blizzard</FilmDescription>
         <FilmDescription isMobilePortrait={isMobilePortrait}>{runtime} minutes</FilmDescription>
         <FilmText onClick={() => setOpenTrailer(true)}>{text}</FilmText>
-        <a
-          href="https://www.eventbrite.ca/e/years-fall-later-tickets-777311498617?aff=oddtdtcreator"
-          style={{ color: '#73593d', textDecoration: 'none', paddingTop: isMobilePortrait ? '0.5rem' : '1rem' }}>
-          <FilmText>Buy Tickets</FilmText>
-        </a>
       </FilmTextContainer>
       <div></div>
     </FilmContainer>

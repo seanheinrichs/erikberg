@@ -22,13 +22,14 @@ function Poems() {
       <Preview handleOnClose={() => setOpenPreview(false)} open={openPreview} selectedIndex={selectedIndex} />
       <Header />
       <BooksContainer>
-        {books.map(({ title, image, date, pageCount, dateSimple }, index) => {
+        {books.map(({ title, image, date, pageCount, dateSimple, linkText }, index) => {
           return (
             <Book
               key={index}
               id={index}
               title={title}
               image={image}
+              linkText={linkText}
               date={date}
               dateSimple={dateSimple}
               pageCount={pageCount}
