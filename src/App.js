@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import Home from './pages/Home';
-import Poems from './pages/Poems';
-import Films from './pages/Films';
-import Order from './pages/Order';
+import Home from './pages/home/Home';
+import Poems from './pages/poems/Poems';
+import Films from './pages/films/Films';
+import Order from './pages/order/Order';
 import { Routes, Route } from 'react-router-dom';
 import { useMediaQuery } from '@mui/material';
 import './App.css';

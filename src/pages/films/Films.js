@@ -1,16 +1,9 @@
-import Header from '../components/header/Header';
+import Header from '../../components/header/Header';
 import { useState } from 'react';
-import Trailer from '../components/trailer/Trailer';
-import films from '../data/films.json';
-import Film from '../components/film/Film';
-import styled from '@emotion/styled';
-
-const FilmsContainer = styled('div')({
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'flex-start',
-  alignContent: 'center'
-});
+import Trailer from '../../components/trailer/Trailer';
+import films from '../../data/films.json';
+import Film from '../../components/film/Film';
+import { FilmsContainer } from './Films.styles';
 
 function Films() {
   const [openTrailer, setOpenTrailer] = useState(false);

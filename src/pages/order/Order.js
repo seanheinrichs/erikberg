@@ -1,63 +1,15 @@
-import styled from '@emotion/styled';
 import { useEffect, useState } from 'react';
-import Item from '../components/item/Item';
+import Item from '../../components/item/Item';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useMediaQueries } from '../hooks/useMediaQueries';
-
-const OrderContainer = styled('div')(({ isMobileLandscape, isMobilePortrait }) => ({
-  width: isMobilePortrait ? '90%' : isMobileLandscape ? '70%' : '50%',
-  height: '100%',
-  position: 'absolute',
-  // overflow: "hidden", // if things break try putting this back
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'flex-start',
-  flexDirection: 'column',
-  paddingLeft: isMobilePortrait ? '5%' : isMobileLandscape ? '15%' : '25%',
-  paddingRight: isMobilePortrait ? '5%' : isMobileLandscape ? '15%' : '25%'
-}));
-
-const BackButtonContainer = styled('div')(({ isMobileLandscape }) => ({
-  maxWidth: '100%',
-  maxHeight: '100%',
-  paddingBottom: '4vh',
-  paddingTop: isMobileLandscape && '2vh',
-  cursor: 'pointer'
-}));
-
-const TotalContainer = styled('div')({
-  display: 'flex',
-  flexDirection: 'column',
-  width: '100%',
-  justifyContent: 'flex-end'
-});
-
-const TotalLine = styled('hr')({
-  width: '8em',
-  marginRight: '0px',
-  borderTop: '3px solid',
-  color: '#73593d'
-});
-
-const TotalPrice = styled('div')({
-  color: '#73593d',
-  fontWeight: 'bold',
-  fontSize: '1.3em',
-  width: '100%',
-  textAlign: 'right'
-});
-
-const CompletePurchaseContainer = styled('a')(({ isMobileLandscape, isDisabled }) => ({
-  width: '100%',
-  textAlign: 'right',
-  color: isDisabled ? '#878787 !important' : '#6a7a9f !important',
-  fontWeight: 'bold',
-  fontSize: '1.3em',
-  paddingTop: '6vh',
-  paddingBottom: isMobileLandscape && '2vh',
-  textDecoration: 'none',
-  pointerEvents: isDisabled && 'none'
-}));
+import { useMediaQueries } from '../../hooks/useMediaQueries';
+import {
+  OrderContainer,
+  BackButtonContainer,
+  TotalContainer,
+  TotalLine,
+  TotalPrice,
+  CompletePurchaseContainer
+} from './Order.styles';
 
 function Order() {
   const navigate = useNavigate();

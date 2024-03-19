@@ -1,17 +1,10 @@
-import books from '../data/poetry-books.json';
-import Book from '../components/book/Book';
-import Header from '../components/header/Header';
-import styled from '@emotion/styled';
+import books from '../../data/poetry-books.json';
+import Book from '../../components/book/Book';
+import Header from '../../components/header/Header';
 import { useState } from 'react';
-import Preview from '../components/preview/preview';
+import Preview from '../../components/preview/preview';
 import React from 'react';
-
-const BooksContainer = styled('div')({
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'flex-start',
-  alignContent: 'center'
-});
+import { BooksContainer } from './Poems.styles';
 
 function Poems() {
   const [openPreview, setOpenPreview] = useState(false);
