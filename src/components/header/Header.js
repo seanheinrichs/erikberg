@@ -1,24 +1,6 @@
-import styled from '@emotion/styled';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useMediaQueries } from '../../hooks/useMediaQueries';
-
-const HomeButtonContainer = styled('div')(({ isMobilePortrait, isMobileLandscape }) => ({
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  gap: isMobileLandscape ? '15%' : isMobilePortrait ? '15%' : '10%',
-  width: '100%'
-}));
-
-const HomeButton = styled('button')(({ isMobileLandscape, isMobilePortrait }) => ({
-  border: 'none',
-  backgroundColor: 'inherit',
-  fontFamily: 'Caslons',
-  padding: '2rem 0rem 2rem 0rem',
-  fontSize: isMobileLandscape ? '3vmax' : isMobilePortrait ? '2em' : '2em',
-  cursor: 'pointer',
-  color: '#6a7a9f'
-}));
+import { HomeButtonContainer, HomeButton } from './Header.styles';
 
 const Routes = {
   Poems: '/poems',

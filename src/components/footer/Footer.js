@@ -1,16 +1,5 @@
-import styled from '@emotion/styled';
 import { useMediaQuery } from '@mui/material';
-
-const FooterText = styled('div')(({ isPortrait }) => ({
-  color: '#6a7a9f',
-  fontWeight: 1000,
-  fontSize: '1rem',
-  paddingBottom: isPortrait ? '0' : '8vh'
-}));
-
-const PhoneNumber = styled('div')(({ isPortrait }) => ({
-  marginBottom: isPortrait ? '10px' : '3px'
-}));
+import { FooterText, PhoneNumber } from './Footer.styles';
 
 export const Footer = () => {
   const isPortrait = useMediaQuery('(max-width:600px)');
